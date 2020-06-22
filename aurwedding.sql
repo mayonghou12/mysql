@@ -12,7 +12,7 @@ MySQL - 5.5.40 : Database - aurwedding
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`aurwedding` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`aurwedding` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
 
 USE `aurwedding`;
 
@@ -62,7 +62,7 @@ CREATE TABLE `hotel` (
   `img_id` varchar(20) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`hot_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=gbk;
 
 /*Data for the table `hotel` */
 
@@ -112,6 +112,7 @@ CREATE TABLE `journalism` (
   `jou_uploadTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `jou_updataTime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` int(11) DEFAULT NULL,
+  `img_id` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`jou_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -129,11 +130,11 @@ CREATE TABLE `tour_photo` (
   `status` int(11) DEFAULT NULL,
   `img_id` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`tour_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tour_photo` */
 
-insert  into `tour_photo`(`tour_id`,`img_url`,`tour_createTime`,`tour_title`,`status`,`img_id`) values (1,NULL,'2020-06-19 08:52:53','shou',1,'2'),(2,NULL,'2020-06-19 08:52:53','shou',1,'3'),(3,NULL,'2020-06-19 08:52:53','shou',1,'4'),(4,NULL,'2020-06-19 08:52:53','shou',1,'5'),(5,NULL,'2020-06-19 08:52:53','shou',1,'6'),(6,NULL,'2020-06-19 08:52:53','shou',1,'7'),(7,NULL,'2020-06-19 08:52:53','shou',1,'8'),(8,NULL,'2020-06-19 08:52:53','shou',1,'9'),(9,NULL,'2020-06-19 08:52:53','haibian',1,'10'),(10,NULL,'2020-06-19 08:52:53','haibian',1,'11'),(11,NULL,'2020-06-19 08:52:53','haibian',1,'12'),(12,NULL,'2020-06-19 08:52:53','haibian',1,'13'),(13,NULL,'2020-06-19 08:52:53','haibian',1,'14'),(14,NULL,'2020-06-19 08:52:53','haibian',1,'15'),(15,NULL,'2020-06-19 08:52:53','haibian',1,'16'),(16,NULL,'2020-06-19 08:52:53','haibian',1,'17'),(17,NULL,'2020-06-19 08:52:53','haibian',1,'18'),(18,NULL,'2020-06-19 08:52:53','yunitongzai',1,'19'),(19,NULL,'2020-06-19 08:52:53','yunitongzai',1,'20'),(20,NULL,'2020-06-19 08:52:53','yunitongzai',1,'21'),(21,NULL,'2020-06-19 08:52:53','yunitongzai',1,'22'),(22,NULL,'2020-06-19 08:52:53','yunitongzai',1,'23'),(23,NULL,'2020-06-19 08:52:53','yunitongzai',1,'24'),(24,NULL,'2020-06-19 08:52:53','yunitongzai',1,'25'),(25,NULL,'2020-06-19 08:52:53','yunitongzai',1,'26'),(26,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'51'),(27,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'52'),(28,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'53'),(29,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'54'),(30,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'55'),(31,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'56'),(32,NULL,'2020-06-19 09:07:48','jiehuansanjiantao',1,'57');
+insert  into `tour_photo`(`tour_id`,`img_url`,`tour_createTime`,`tour_title`,`status`,`img_id`) values (17,NULL,'2020-06-19 08:52:53','haibian',1,'18'),(18,NULL,'2020-06-19 08:52:53','yunitongzai',1,'19'),(19,NULL,'2020-06-19 08:52:53','yunitongzai',1,'20'),(20,NULL,'2020-06-19 08:52:53','yunitongzai',1,'21'),(21,NULL,'2020-06-19 08:52:53','yunitongzai',1,'22'),(22,NULL,'2020-06-19 08:52:53','yunitongzai',1,'23'),(23,NULL,'2020-06-19 08:52:53','yunitongzai',1,'24'),(24,NULL,'2020-06-19 08:52:53','yunitongzai',1,'25'),(25,NULL,'2020-06-19 08:52:53','yunitongzai',1,'26');
 
 /*Table structure for table `wedding` */
 
