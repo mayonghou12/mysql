@@ -28,9 +28,11 @@ CREATE TABLE `bridal_veil` (
   `status` int(11) DEFAULT NULL,
   `img_id` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`bv_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `bridal_veil` */
+
+insert  into `bridal_veil`(`bv_id`,`img_url`,`bv_createTime`,`bv_title`,`status`,`img_id`) values (1,NULL,'2020-06-24 00:00:00','redse',1,'76'),(2,NULL,'2020-06-24 00:00:00','redse2',1,'77'),(3,NULL,'2020-06-24 00:00:00','redse3',1,'78'),(4,NULL,'2020-06-24 00:00:00','elegant1',1,'79'),(5,NULL,'2020-06-24 00:00:00','elegant2',1,'80');
 
 /*Table structure for table `honeymoon` */
 
@@ -64,7 +66,7 @@ CREATE TABLE `hotel` (
 
 /*Data for the table `hotel` */
 
-insert  into `hotel`(`hot_id`,`hot_name`,`hot_logo`,`hot_detail`,`img_id`,`status`) values (1,'福州名城豪生大酒店',NULL,'福州名城豪生大酒店 福州名城豪生大酒店位于美丽的闽江河畔,是一家按照五星级标准建造的国际品牌酒店,奢华时尚的设计具有浓厚的现代气息。','45',1),(2,'戴斯酒店',NULL,'戴斯”是温德姆酒店集团（Wyndham Hotels & Resorts）旗下最大、最著名的酒店品牌。在温德姆所有经营的品牌中，戴斯品牌（DaysInn®）占有最高的市场份额。在全球15个国家拥有超过160,000间客房。CecilB.Day1970年创立戴斯，品牌历史超过40年。','46',1),(3,'最佳西方财富酒店',NULL,'最佳西方财富酒店是全球最大酒店连锁机构——美国最佳西方国际集团在福州地区的连锁酒店，是一家新装修开业的商务型酒店。','47',1),(4,'国惠大酒店',NULL,'国惠大酒店是由惠州市国惠大酒店有限公司投资，按国际五星级标准投资兴建的大型商务酒店，位于著名的“中国女鞋生产基地”——惠州市惠东县黄埠镇，毗邻著名的滨海度假胜地巽寮湾，交通便利，地理位置得天独厚，是您商务休闲、度假旅游的最佳之处。','48',1),(5,'福州悦华酒店',NULL,'福州悦华酒店为高端商务会议型酒店。酒店传承“悦华”品牌的高端接待服务文化，致力于传递“温馨悦华，商旅之家”的经典品牌理念。酒店坐落于西湖之畔，闹中取静。','49',1);
+insert  into `hotel`(`hot_id`,`hot_name`,`hot_logo`,`hot_detail`,`img_id`,`status`) values (2,'戴斯酒店',NULL,'戴斯”是温德姆酒店集团（Wyndham Hotels & Resorts）旗下最大、最著名的酒店品牌。在温德姆所有经营的品牌中，戴斯品牌（DaysInn®）占有最高的市场份额。在全球15个国家拥有超过160,000间客房。CecilB.Day1970年创立戴斯，品牌历史超过40年。','46',1),(3,'最佳西方财富酒店',NULL,'最佳西方财富酒店是全球最大酒店连锁机构——美国最佳西方国际集团在福州地区的连锁酒店，是一家新装修开业的商务型酒店。','47',0),(4,'国惠大酒店',NULL,'国惠大酒店是由惠州市国惠大酒店有限公司投资，按国际五星级标准投资兴建的大型商务酒店，位于著名的“中国女鞋生产基地”——惠州市惠东县黄埠镇，毗邻著名的滨海度假胜地巽寮湾，交通便利，地理位置得天独厚，是您商务休闲、度假旅游的最佳之处。','48',1),(5,'福州悦华酒店',NULL,'福州悦华酒店为高端商务会议型酒店。酒店传承“悦华”品牌的高端接待服务文化，致力于传递“温馨悦华，商旅之家”的经典品牌理念。酒店坐落于西湖之畔，闹中取静。','49',0);
 
 /*Table structure for table `img` */
 
@@ -76,11 +78,11 @@ CREATE TABLE `img` (
   `img_createTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `img_title` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`img_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=latin1;
 
 /*Data for the table `img` */
 
-insert  into `img`(`img_id`,`img_url`,`img_createTime`,`img_title`) values (10,'file_1592210244926.jpg','2020-06-15 16:37:24',NULL),(11,'file_1592238288668.jpg','2020-06-16 00:24:48',NULL),(12,'file_1592238346551.jpg','2020-06-16 00:25:46',NULL),(13,'file_1592238425240.jpg','2020-06-16 00:27:05',NULL),(14,'file_1592238475329.jpg','2020-06-16 00:27:55',NULL),(15,'file_1592238612873.jpg','2020-06-16 00:30:12',NULL),(16,'file_1592267766715.jpg','2020-06-16 08:36:06',NULL),(17,'file_1592269284728.jpg','2020-06-16 09:01:24',NULL),(18,'file_1592452090214.png','2020-06-18 11:48:10',NULL),(19,'file_1592538182180.png','2020-06-19 11:43:02',NULL),(20,'file_1592538362888.png','2020-06-19 11:46:02',NULL),(21,'file_1592550212593.png','2020-06-19 15:03:32',NULL),(22,'file_1592550257720.jpg','2020-06-19 15:04:17',NULL),(23,'file_1592550505643.jpg','2020-06-19 15:08:25',NULL),(24,'file_1592550568713.png','2020-06-19 15:09:28',NULL),(25,'file_1592550623328.png','2020-06-19 15:10:23',NULL),(26,'file_1592550919935.jpg','2020-06-19 15:15:20',NULL),(27,'file_1592550985581.png','2020-06-19 15:16:25',NULL),(28,'file_1592554080437.jpg','2020-06-19 16:08:00',NULL),(29,'file_1592554555394.png','2020-06-19 16:15:55',NULL),(30,'file_1592558467122.png','2020-06-19 17:21:07',NULL),(31,'file_1592558699926.png','2020-06-19 17:24:59',NULL),(32,'file_1592558913293.png','2020-06-19 17:28:33',NULL),(33,'file_1592558966698.jpg','2020-06-19 17:29:26',NULL),(34,'file_1592559027917.png','2020-06-19 17:30:27',NULL),(35,'file_1592559397236.jpg','2020-06-19 17:36:37',NULL),(36,'file_1592560835819.png','2020-06-19 18:00:35',NULL),(37,'file_1592561422700.png','2020-06-19 18:10:22',NULL),(38,'file_1592561636385.png','2020-06-19 18:13:56',NULL),(39,'file_1592561762323.png','2020-06-19 18:16:02',NULL),(40,'file_1592561939623.png','2020-06-19 18:18:59',NULL),(41,'file_1592613473594.jpg','2020-06-20 08:37:53',NULL),(42,'file_1592613750576.png','2020-06-20 08:42:30',NULL),(43,'file_1592613854650.png','2020-06-20 08:44:14',NULL),(44,'file_1592614430858.jpg','2020-06-20 08:53:50',NULL),(45,'file_1592616880553.jpg','2020-06-20 09:34:40',NULL),(46,'file_1592616998867.jpg','2020-06-20 09:36:38',NULL),(47,'file_1592617069186.jpg','2020-06-20 09:37:49',NULL),(48,'file_1592617144196.jpg','2020-06-20 09:39:04',NULL),(49,'file_1592617205113.jpg','2020-06-20 09:40:05',NULL),(50,'file_1592617506425.jpg','2020-06-20 09:45:06',NULL),(51,'file_1592619415595.jpg','2020-06-20 10:16:55',NULL),(52,'file_1592624978613.jpg','2020-06-20 11:49:38',NULL),(53,'file_1592625093098.jpg','2020-06-20 11:51:33',NULL),(54,'file_1592625149109.jpg','2020-06-20 11:52:29',NULL),(55,'file_1592625189771.jpg','2020-06-20 11:53:09',NULL);
+insert  into `img`(`img_id`,`img_url`,`img_createTime`,`img_title`) values (10,'file_1592210244926.jpg','2020-06-15 16:37:24',NULL),(11,'file_1592238288668.jpg','2020-06-16 00:24:48',NULL),(12,'file_1592238346551.jpg','2020-06-16 00:25:46',NULL),(13,'file_1592238425240.jpg','2020-06-16 00:27:05',NULL),(14,'file_1592238475329.jpg','2020-06-16 00:27:55',NULL),(15,'file_1592238612873.jpg','2020-06-16 00:30:12',NULL),(16,'file_1592267766715.jpg','2020-06-16 08:36:06',NULL),(17,'file_1592269284728.jpg','2020-06-16 09:01:24',NULL),(18,'file_1592452090214.png','2020-06-18 11:48:10',NULL),(19,'file_1592538182180.png','2020-06-19 11:43:02',NULL),(20,'file_1592538362888.png','2020-06-19 11:46:02',NULL),(21,'file_1592550212593.png','2020-06-19 15:03:32',NULL),(22,'file_1592550257720.jpg','2020-06-19 15:04:17',NULL),(23,'file_1592550505643.jpg','2020-06-19 15:08:25',NULL),(24,'file_1592550568713.png','2020-06-19 15:09:28',NULL),(25,'file_1592550623328.png','2020-06-19 15:10:23',NULL),(26,'file_1592550919935.jpg','2020-06-19 15:15:20',NULL),(27,'file_1592550985581.png','2020-06-19 15:16:25',NULL),(28,'file_1592554080437.jpg','2020-06-19 16:08:00',NULL),(29,'file_1592554555394.png','2020-06-19 16:15:55',NULL),(30,'file_1592558467122.png','2020-06-19 17:21:07',NULL),(31,'file_1592558699926.png','2020-06-19 17:24:59',NULL),(32,'file_1592558913293.png','2020-06-19 17:28:33',NULL),(33,'file_1592558966698.jpg','2020-06-19 17:29:26',NULL),(34,'file_1592559027917.png','2020-06-19 17:30:27',NULL),(35,'file_1592559397236.jpg','2020-06-19 17:36:37',NULL),(36,'file_1592560835819.png','2020-06-19 18:00:35',NULL),(37,'file_1592561422700.png','2020-06-19 18:10:22',NULL),(38,'file_1592561636385.png','2020-06-19 18:13:56',NULL),(39,'file_1592561762323.png','2020-06-19 18:16:02',NULL),(40,'file_1592561939623.png','2020-06-19 18:18:59',NULL),(41,'file_1592613473594.jpg','2020-06-20 08:37:53',NULL),(42,'file_1592613750576.png','2020-06-20 08:42:30',NULL),(43,'file_1592613854650.png','2020-06-20 08:44:14',NULL),(44,'file_1592614430858.jpg','2020-06-20 08:53:50',NULL),(45,'file_1592616880553.jpg','2020-06-20 09:34:40',NULL),(46,'file_1592616998867.jpg','2020-06-20 09:36:38',NULL),(47,'file_1592617069186.jpg','2020-06-20 09:37:49',NULL),(48,'file_1592617144196.jpg','2020-06-20 09:39:04',NULL),(49,'file_1592617205113.jpg','2020-06-20 09:40:05',NULL),(50,'file_1592617506425.jpg','2020-06-20 09:45:06',NULL),(51,'file_1592619415595.jpg','2020-06-20 10:16:55',NULL),(52,'file_1592624978613.jpg','2020-06-20 11:49:38',NULL),(53,'file_1592625093098.jpg','2020-06-20 11:51:33',NULL),(54,'file_1592625149109.jpg','2020-06-20 11:52:29',NULL),(55,'file_1592625189771.jpg','2020-06-20 11:53:09',NULL),(56,'file_1592642199016.jpg','2020-06-20 16:36:39',NULL),(57,'file_1592642626027.jpg','2020-06-20 16:43:46',NULL),(58,'file_1592642626038.jpg','2020-06-20 16:43:46',NULL),(59,'file_1592643501727.jpg','2020-06-20 16:58:21',NULL),(60,'file_1592795834227.jpg','2020-06-22 11:17:14',NULL),(61,'file_1592810701218.jpg','2020-06-22 15:25:01',NULL),(62,'file_1592814440913.jpg','2020-06-22 16:27:20',NULL),(63,'file_1592814453418.jpg','2020-06-22 16:27:33',NULL),(64,'file_1592872918043.jpg','2020-06-23 08:41:58',NULL),(65,'file_1592877185503.jpg','2020-06-23 09:53:05',NULL),(66,'file_1592881363090.jpg','2020-06-23 11:02:43',NULL),(67,'file_1592881401641.jpg','2020-06-23 11:03:21',NULL),(68,'file_1592881434660.jpg','2020-06-23 11:03:54',NULL),(69,'file_1592881471597.jpg','2020-06-23 11:04:31',NULL),(70,'file_1592881494281.jpg','2020-06-23 11:04:54',NULL),(71,'file_1592881559140.jpg','2020-06-23 11:05:59',NULL),(72,'file_1592881601096.jpg','2020-06-23 11:06:41',NULL),(73,'file_1592881642248.jpg','2020-06-23 11:07:22',NULL),(74,'file_1592881668568.jpg','2020-06-23 11:07:48',NULL),(75,'file_1592881688726.jpg','2020-06-23 11:08:08',NULL),(76,'file_1592881720274.jpg','2020-06-23 11:08:40',NULL),(77,'file_1592881729699.jpg','2020-06-23 11:08:49',NULL),(78,'file_1592881739746.jpg','2020-06-23 11:08:59',NULL),(79,'file_1592881771673.jpg','2020-06-23 11:09:31',NULL),(80,'file_1592881781778.jpg','2020-06-23 11:09:41',NULL),(81,'file_1592881839822.jpg','2020-06-23 11:10:39',NULL),(82,'file_1592881923372.jpg','2020-06-23 11:12:03',NULL),(83,'file_1592882061926.jpg','2020-06-23 11:14:21',NULL),(84,'file_1592882302132.jpg','2020-06-23 11:18:22',NULL),(85,'file_1592882323713.jpg','2020-06-23 11:18:43',NULL),(86,'file_1592882361231.jpg','2020-06-23 11:19:21',NULL);
 
 /*Table structure for table `jewel` */
 
@@ -92,11 +94,13 @@ CREATE TABLE `jewel` (
   `jew_createTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `jew_title` varchar(20) DEFAULT NULL,
   `img_id` varchar(20) DEFAULT NULL,
-  `stutas` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`jew_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*Data for the table `jewel` */
+
+insert  into `jewel`(`jew_id`,`img_url`,`jew_createTime`,`jew_title`,`img_id`,`status`) values (1,NULL,'2020-06-23 11:18:20','dksfk','84',1),(2,NULL,'2020-06-24 00:00:00','Emerald','85',0),(3,NULL,'2020-06-25 00:00:00','Flower','86',1);
 
 /*Table structure for table `journalism` */
 
@@ -130,11 +134,11 @@ CREATE TABLE `tour_photo` (
   `status` int(11) DEFAULT NULL,
   `img_id` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`tour_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 /*Data for the table `tour_photo` */
 
-insert  into `tour_photo`(`tour_id`,`img_url`,`tour_createTime`,`tour_title`,`status`,`img_id`) values (1,NULL,'2020-06-19 00:00:00','aSDFGH',1,'18');
+insert  into `tour_photo`(`tour_id`,`img_url`,`tour_createTime`,`tour_title`,`status`,`img_id`) values (5,NULL,'2020-06-23 00:00:00','Paris',1,'66'),(6,NULL,'2020-06-24 00:00:00','dusks',0,'67'),(7,NULL,'2020-06-24 00:00:00','conception',1,'68'),(8,NULL,'2020-06-24 00:00:00','aquatic',1,'69'),(9,NULL,'2020-06-24 00:00:00',' ?? balloon',0,'70');
 
 /*Table structure for table `wedding` */
 
@@ -148,9 +152,11 @@ CREATE TABLE `wedding` (
   `img_id` varchar(20) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`wed_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `wedding` */
+
+insert  into `wedding`(`wed_id`,`img_url`,`wed_createTime`,`wed_title`,`img_id`,`status`) values (1,NULL,'2020-06-23 11:05:57','bloom of youth','71',1),(2,NULL,'2020-06-23 11:06:40','Original three lives','72',0),(3,NULL,'2020-06-23 11:06:40','happiness','73',0),(4,NULL,'2020-06-23 11:06:40','Blue witch','74',1),(5,NULL,'2020-06-23 11:06:40','propose','75',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
